@@ -24,7 +24,7 @@ Usage
 
 ```bash
 cd derrick-1600
-docker-compose up -d # may take 5+ mins to build
+docker-compose up -d # may take 7+ mins to build
 ```
 
 Credits
