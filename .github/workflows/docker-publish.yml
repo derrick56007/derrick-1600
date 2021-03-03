@@ -4,6 +4,12 @@ on:
     # Publish `main` as Docker `latest` image.
     branches:
       - main
+    paths-ignore:
+      - '**/README.md' 
+      - '**/.gitignore' 
+      - '**/demo.gif'
+      - '**/docker-compose.yml'
+      
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
