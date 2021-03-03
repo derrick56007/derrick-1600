@@ -22,9 +22,9 @@ git clone https://github.com/Derrick56007/derrick-1600.git
 Usage
 ------------
 
-```
+```bash
 cd derrick-1600
-docker-compose up -d
+docker-compose up -d # will take 5+ mins to build
 ```
 
 Credits
