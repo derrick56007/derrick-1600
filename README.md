@@ -4,7 +4,9 @@
 
 ![](demo.gif?raw=true)
 
-Named-entity recognition (NER) seeks to locate and classify named entities in unstructured text into pre-defined categories such as person names, organizations, locations, medical codes, time expressions, quantities, monetary values, percentages, etc[1].
+[Named-entity recognition](https://en.wikipedia.org/wiki/Named-entity_recognition) (NER) seeks to locate and classify named entities in unstructured text into pre-defined categories such as person names, organizations, locations, medical codes, time expressions, quantities, monetary values, percentages, etc[1].
+
+This application is written in Python and is meant to simply showcase NER. The Service and UI are bundled to be executed using Docker Compose. The service offers an HTTP API which performs NER on any given text with any specified NLP library ([spaCy](https://spacy.io/) or [Stanza](https://stanfordnlp.github.io/stanza/)). This API could be used by any other HTTP client to run NER on a given text. The UI is built using streamlit and interacts with the service over HTTP.
 
 Requirements
 ------------
@@ -37,4 +39,4 @@ This project would not be possible without the following libraries:
 
 ## References
 <a id="1">[1]</a> 
-Https://enwikipediaorg/wiki/Named-entity_recognition. (2021). Named-entity recognition. Retrieved 3 March, 2021, from https://en.wikipedia.org/wiki/Named-entity_recognition
+https://enwikipediaorg/wiki/Named-entity_recognition. (2021). Named-entity recognition. Retrieved 3 March, 2021, from https://en.wikipedia.org/wiki/Named-entity_recognition
