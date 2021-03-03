@@ -1,0 +1,32 @@
+version: "2.1"
+services:
+  server:
+    container_name: server
+    build:
+      context: server/
+    ports:
+      - 8081:8081
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8081
+    restart: unless-stopped
+  
+  ui:
+    container_name: ui
+    build:
+      context: ui/
+    depends_on: 
+      - server
+    ports:
+      - 8501:8501
+    restart: unless-stopped
+
+  jupyter-notebook:
+    image: jupyter/datascience-notebook
+    depends_on:
+      - server 
+    volumes: 
+      - $PWD:/home/jovyan
+    ports:
+      - 8888:8888
+    restart: unless-stopped
