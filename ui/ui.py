@@ -1,3 +1,4 @@
+import os
 import json
 import random
 import requests
@@ -40,7 +41,10 @@ submit = st.button('Submit')
 
 # only render if text is inputted
 if text_in and option_in and submit:
-    url = 'http://server:8081/ner'
+    host = os.environ.get('API_HOST', 'server')
+    port = int(os.environ.get('API_PORT', 8081))
+
+    url = 'http://{}:{}/ner'.format(host, port)
     payload = {
         'text': text_in,
         'option': option_in

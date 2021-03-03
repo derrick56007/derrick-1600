@@ -4,8 +4,6 @@ services:
     container_name: server
     build:
       context: server/
-    ports:
-      - 8081:8081
     environment:
       - HOST=0.0.0.0
       - PORT=8081
@@ -17,6 +15,9 @@ services:
       context: ui/
     depends_on: 
       - server
+    environment:
+      - API_HOST=server
+      - API_PORT=8081      
     ports:
       - 8501:8501
     restart: unless-stopped
