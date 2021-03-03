@@ -1,3 +1,11 @@
+"""
+Filename: server.py
+Author: Derrick Liu
+Email: me@derrickliu.dev
+Date: 3/3/2021
+About: This runs the service offering an HTTP API to perform NER on any text
+"""
+
 import os
 import json
 import spacy

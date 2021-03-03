@@ -1,3 +1,11 @@
+"""
+Filename: ui.py
+Author: Derrick Liu
+Email: me@derrickliu.dev
+Date: 3/3/2021
+About: This runs the UI to interact with the NER HTTP API.
+"""
+
 import os
 import json
 import random
@@ -54,7 +62,7 @@ if text_in and option_in and submit:
         'cache-control': "no-cache"
     }
 
-    # render spinner
+    # render spinner while waiting for response
     with st.spinner('Wait for it...'):
         # call NER api
         response = requests.request('GET', url, data=json.dumps(payload), headers=headers)
@@ -87,7 +95,7 @@ if text_in and option_in and submit:
         }
     '''
 
-    # constants
+    # constants for rendering entities
     start_index = 1
     end_index = 2
     type_index = 3
@@ -114,7 +122,7 @@ if text_in and option_in and submit:
     curr = 0
 
     for ent in data['ents']:
-        # create html for entity types
+        # create pretty formatting for entity types
 
         html_string += '<div>{}</div>'.format(data['text'][curr:ent[start_index]])
         html_string += '''
