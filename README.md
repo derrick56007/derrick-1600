@@ -32,6 +32,8 @@ Credits
 This project would not be possible without the following libraries:
 - [spaCy](https://spacy.io/)
 - [Stanza](https://stanfordnlp.github.io/stanza/)
+- [Bottle](https://bottlepy.org/docs/dev/)
+- [Streamlit](https://streamlit.io/)
 
 ## References
 <a id="1">[1]</a> 
