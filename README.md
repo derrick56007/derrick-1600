@@ -22,10 +22,18 @@ git clone https://github.com/Derrick56007/derrick-1600.git
 Usage
 ------------
 
-```
+```bash
 cd derrick-1600
-docker-compose up -d
+docker-compose up -d # may take 7+ mins to build
 ```
+
+Credits
+-------
+This project would not be possible without the following libraries:
+- [spaCy](https://spacy.io/)
+- [Stanza](https://stanfordnlp.github.io/stanza/)
+- [Bottle](https://bottlepy.org/docs/dev/)
+- [Streamlit](https://streamlit.io/)
 
 ## References
 <a id="1">[1]</a> 
