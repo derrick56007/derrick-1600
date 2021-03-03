@@ -63,29 +63,29 @@ if text_in and option_in and submit:
 
     ################## do some pretty rendering... ##################
     html_string = '''
-<style>
-    #out, .ent {
-        display: flex;
-    }
-    #out {
-        max-width: 730px;
-        flex-wrap: wrap;
-        align-items: center;        
-    }
-    .ent {
-        margin: 5px;
-        border: 1px black solid;
-        border-radius: 5px;
-        align-items: flex-end;
-    }
-    .ent > div {
-        padding: 5px;
-    }
-    .ent-type {
-        font-weight: 600;
-        font-size: .75em;
-    }
-'''
+    <style>
+        #out, .ent {
+            display: flex;
+        }
+        #out {
+            max-width: 730px;
+            flex-wrap: wrap;
+            align-items: center;        
+        }
+        .ent {
+            margin: 5px;
+            border: 1px black solid;
+            border-radius: 5px;
+            align-items: flex-end;
+        }
+        .ent > div {
+            padding: 5px;
+        }
+        .ent-type {
+            font-weight: 600;
+            font-size: .75em;
+        }
+    '''
 
     # constants
     start_index = 1
@@ -105,9 +105,9 @@ if text_in and option_in and submit:
         html_string += '}'
 
     html_string += '''
-</style>
-<h3>Output:</h3>
-'''
+    </style>
+    <h3>Output:</h3>
+    '''
     st.markdown(html_string, unsafe_allow_html=True)
     html_string = '<div id="out">'
 
@@ -118,10 +118,10 @@ if text_in and option_in and submit:
 
         html_string += '<div>{}</div>'.format(data['text'][curr:ent[start_index]])
         html_string += '''
-<div class="ent {}">
-    <div>{}</div>
-    <div class="ent-type">{}</div>
-</div>'''.format(ent[type_index], data['text'][ent[start_index]:ent[end_index]], ent[type_index])
+        <div class="ent {}">
+            <div>{}</div>
+            <div class="ent-type">{}</div>
+        </div>'''.format(ent[type_index], data['text'][ent[start_index]:ent[end_index]], ent[type_index])
         curr = ent[end_index]
 
 

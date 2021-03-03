@@ -7,7 +7,6 @@ from bottle import route, run, request, template
 nlp_spacy = spacy.load("en_core_web_sm") # load spaCy model
 nlp_stanza = stanza.Pipeline('en') # initialize English neural pipeline
 
-
 @route('/ner')
 def ner_api():
     """ Runs NER on any given text. The data must be sent as json and contain 'text' and 'option'.
