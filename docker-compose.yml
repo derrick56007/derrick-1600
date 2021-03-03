@@ -20,13 +20,3 @@ services:
     ports:
       - 8501:8501
     restart: unless-stopped
-
-  jupyter-notebook:
-    image: jupyter/datascience-notebook
-    depends_on:
-      - server 
-    volumes: 
-      - $PWD:/home/jovyan
-    ports:
-      - 8888:8888
-    restart: unless-stopped
