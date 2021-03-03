@@ -27,6 +27,12 @@ cd derrick-1600
 docker-compose up -d
 ```
 
+Credits
+-------
+This project would not be possible without the following libraries:
+- [spaCy](https://spacy.io/)
+- [Stanza](https://stanfordnlp.github.io/stanza/)
+
 ## References
 <a id="1">[1]</a> 
 Https://enwikipediaorg/wiki/Named-entity_recognition. (2021). Named-entity recognition. Retrieved 3 March, 2021, from https://en.wikipedia.org/wiki/Named-entity_recognition
