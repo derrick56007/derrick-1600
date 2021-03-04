@@ -28,7 +28,7 @@ Usage
 cd derrick-1600
 docker-compose up -d # may take 7+ mins to build
 ```
-access the app at localhost:8501
+access the app at [localhost:8501](http://localhost:8501)
 
 
 Credits
